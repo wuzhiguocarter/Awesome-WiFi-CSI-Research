@@ -50,3 +50,33 @@
 - 开源项目
 
 [WiFi-movement-identification](https://github.com/persistforever/WiFi-movement-identification)
+
+- 博客文章
+
+
+> **动作识别系列**
+
+[文献阅读：手势识别 WiFinger: Leveraging Commodity WiFi for Fine-grained Finger Gesture Recognition （MobiHoc 2016）](http://blog.csdn.net/dfcaihg/article/details/52699561)
+
+[文献阅读：手写识别 WiFinger: Talk to Your Smart Devices with Finger-grained Gesture （UbiComp 2016）](http://blog.csdn.net/dfcaihg/article/details/52763083)
+
+[文献阅读：吸烟识别 Smokey: Ubiquitous Smoking Detection with Commercial WiFi Infrastructures（InfoCom 2016）](http://blog.csdn.net/dfcaihg/article/details/52708626)
+
+[文献阅读：步态识别 Gait Recognition Using WiFi Signals（UbiComp 2016）](http://blog.csdn.net/dfcaihg/article/details/52803525)
+
+> ** 室内定位系列** 
+
+[文献阅读：Device-Free行走方向估计 WiDir: Walking Direction Estimation Using Wireless Signals（UbiComp 2016）](http://blog.csdn.net/dfcaihg/article/details/52846443)
+
+[文献阅读：MUSIC算法在室内定位的应用 以SpotFi（SIGCOMM 2015）和Dynamic-MUSIC（UbiComp 2016）为例](http://blog.csdn.net/dfcaihg/article/details/52914414)
+
+[文献阅读：AoA估计 Tuning by Turning: Enabling Phased Array Signal Precessing for WiFi with Inertial Sensors (InfoCom 2016)](http://blog.csdn.net/dfcaihg/article/details/52687570)
+
+[基于WiFi CSI定位综述](http://www.jianshu.com/p/04c202f51b16)
+
+[CSI的信号模型与测量模型](http://www.jianshu.com/p/d7590470fe32)
+
+[研究笔记： 基于单接入点/单基站WiFi CSI的分米级定位（Chronos2016）](http://www.jianshu.com/p/4ef8b2cee7d4)
+
+[室内定位研究国内外主要实验室、团队和学者（WiFi CSI）](http://www.jianshu.com/p/85399d050305)
+
