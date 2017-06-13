@@ -64,7 +64,7 @@
 
 [文献阅读：步态识别 Gait Recognition Using WiFi Signals（UbiComp 2016）](http://blog.csdn.net/dfcaihg/article/details/52803525)
 
-> ** 室内定位系列** 
+> **室内定位系列** 
 
 [文献阅读：Device-Free行走方向估计 WiDir: Walking Direction Estimation Using Wireless Signals（UbiComp 2016）](http://blog.csdn.net/dfcaihg/article/details/52846443)
 
