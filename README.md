@@ -47,4 +47,6 @@
 
 [DeepFi](https://github.com/mars920314/DeepFi)
 
+- 开源项目
+
 [WiFi-movement-identification](https://github.com/persistforever/WiFi-movement-identification)
