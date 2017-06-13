@@ -1,4 +1,4 @@
-# WiFi-CSI-Research-Q-A
+# Awesome-WiFi-CSI-Research
 ---
 此项目服务于**QQ群（CSI信道状态信息交流：366102075）**
 ---
