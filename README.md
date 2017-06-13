@@ -46,3 +46,5 @@
 [SpotFi的开源实现：Looks Good to Me (LGTM)](https://github.com/egaebel/lgtm)
 
 [DeepFi](https://github.com/mars920314/DeepFi)
+
+[WiFi-movement-identification](https://github.com/persistforever/WiFi-movement-identification)
