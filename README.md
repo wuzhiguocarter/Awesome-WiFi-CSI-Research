@@ -1,7 +1,7 @@
 # Awesome-WiFi-CSI-Research
 置顶：
 
-[CSI_Generator and AoA-ToF Joint Estimation by MUSIC](https://github.com/wuzhiguocarter/Awesome-WiFi-CSI-Research/tree/master/CSI_Generator)
+[Opensource code: CSI_Generator and AoA-ToF Joint Estimation by MUSIC](https://github.com/wuzhiguocarter/Awesome-WiFi-CSI-Research/tree/master/CSI_Generator)
 
 [Related Blog: CSI Generator设计与实现](http://www.jianshu.com/c/6e0897ba0cec)
 
