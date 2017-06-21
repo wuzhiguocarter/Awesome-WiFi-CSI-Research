@@ -1,6 +1,9 @@
 # Awesome-WiFi-CSI-Research
-置顶： [CSI_Generator and AoA-ToF Joint Estimation by MUSIC](https://github.com/wuzhiguocarter/Awesome-WiFi-CSI-Research/tree/master/CSI_Generator)
+置顶：
+[CSI_Generator and AoA-ToF Joint Estimation by MUSIC](https://github.com/wuzhiguocarter/Awesome-WiFi-CSI-Research/tree/master/CSI_Generator)
+
 [Related Blog: CSI Generator设计与实现](http://www.jianshu.com/c/6e0897ba0cec)
+
 ---
 此项目服务于**QQ群（CSI信道状态信息交流：366102075）**
 ---
