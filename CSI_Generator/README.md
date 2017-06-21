@@ -28,15 +28,16 @@
 % Github: https://github.com/wuzhiguocarter/Awesome-WiFi-CSI-Research
 % Blog: http://www.jianshu.com/c/6e0897ba0cec [WiFi CSI Based Indoor Localization]
 
-ÎÄ¼þÁÐ±í
+% Related Blog: [CSI Generatorè®¾è®¡ä¸Žå®žçŽ°](http://www.jianshu.com/c/6e0897ba0cec)
+æ–‡ä»¶åˆ—è¡¨
 C:.
-©¦  API_CSI_Generator.m                 CSI generator
-©¦  API_CSI_MUSIC_Visualize.m           AoA-ToF Joint Estimation MUSIC
-©¦  CSI_Configure.m                     Configure global variable
-©¦  test_JADE_MUSIC.m                   Test Case
-©¦  util_steering_aoa_tof.m             helper function to generate steering vector given aof and tof
-©¦  
-©¸©¤figure                               Automatically saved Example figures by ```API_CSI_MUSIC_Visualize.m ``` script
-    ©¦  MUSIC_AOA_20170620154207.jpg
-    ©¦  MUSIC_AOA_TOF_20170620154207.jpgs
-    ©¦  MUSIC_TOF_20170621002330.jpg
+â”‚  API_CSI_Generator.m                 CSI generator
+â”‚  API_CSI_MUSIC_Visualize.m           AoA-ToF Joint Estimation MUSIC
+â”‚  CSI_Configure.m                     Configure global variable
+â”‚  test_JADE_MUSIC.m                   Test Case
+â”‚  util_steering_aoa_tof.m             helper function to generate steering vector given aof and tof
+â”‚  
+â””â”€figure                               Automatically saved Example figures by ```API_CSI_MUSIC_Visualize.m ``` script
+    â”‚  MUSIC_AOA_20170620154207.jpg
+    â”‚  MUSIC_AOA_TOF_20170620154207.jpgs
+    â”‚  MUSIC_TOF_20170621002330.jpg
