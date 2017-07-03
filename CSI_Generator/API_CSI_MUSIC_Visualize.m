@@ -29,21 +29,21 @@
 % Blog: http://www.jianshu.com/c/6e0897ba0cec [WiFi CSI Based Indoor Localization]
 function API_CSI_MUSIC_Visualize( Xt,samples,paths, Nrx,ant_dist,fc,Nc,Delta_f)
 Rxx=Xt*Xt'/samples;
-[eigvec_mat,diag_mat_of_eigval]=eig(Rxx); % ·µ»ØÌØÕ÷ÏòÁ¿¾ØÕóÓëÌØÕ÷Öµ¶Ô½Ç¾ØÕó
-eigenvalues=diag(diag_mat_of_eigval);     % È¡ËùÓĞÌØÕ÷Öµ
-[~,IndexVector]=sort(eigenvalues);        % ¶ÔÌØÕ÷ÖµÉıĞòÅÅĞò£¬²¢·µ»Øindex vector
+[eigvec_mat,diag_mat_of_eigval]=eig(Rxx); % è¿”å›ç‰¹å¾å‘é‡çŸ©é˜µä¸ç‰¹å¾å€¼å¯¹è§’çŸ©é˜µ
+eigenvalues=diag(diag_mat_of_eigval);     % å–æ‰€æœ‰ç‰¹å¾å€¼
+[~,IndexVector]=sort(eigenvalues);        % å¯¹ç‰¹å¾å€¼å‡åºæ’åºï¼Œå¹¶è¿”å›index vector
 eigvec_mat=fliplr(eigvec_mat(:,IndexVector)); 
-% ½«ÌØÕ÷ÏòÁ¿¾ØÕó°´ÁĞµ÷ÕûË³Ğò£¬µ÷ÕûÔ­ÔòÎª£º´óµÄÌØÕ÷Öµ¶ÔÓ¦µÄÌØÕ÷ÏòÁ¿¿¿×óÅÅ
-% ¼´ÌØÕ÷ÏòÁ¿°´ÌØÕ÷Öµ½øĞĞ½µĞòÅÅÁĞ£¬°ÑÌØÕ÷Öµ¿´×ökey£¬°ÑÌØÕ÷ÏòÁ¿¿´×övalue
+% å°†ç‰¹å¾å‘é‡çŸ©é˜µæŒ‰åˆ—è°ƒæ•´é¡ºåºï¼Œè°ƒæ•´åŸåˆ™ä¸ºï¼šå¤§çš„ç‰¹å¾å€¼å¯¹åº”çš„ç‰¹å¾å‘é‡é å·¦æ’
+% å³ç‰¹å¾å‘é‡æŒ‰ç‰¹å¾å€¼è¿›è¡Œé™åºæ’åˆ—ï¼ŒæŠŠç‰¹å¾å€¼çœ‹åškeyï¼ŒæŠŠç‰¹å¾å‘é‡çœ‹åšvalue
 
-%% ¼ÆËãMUSICÎ±Æ×
+%% è®¡ç®—MUSICä¼ªè°±
 aoa = -90:1:90;       % -90~90 [ns]
 tof = (0:1:100)*1e-9; % 1~100 [ns]
 Pmusic = zeros(length(aoa),length(tof));
 for iAoA = 1:length(aoa)
     for iToF = 1:length(tof)
         a = util_steering_aoa_tof(aoa(iAoA),tof(iToF),Nrx,ant_dist,fc,Nc,Delta_f);            L=paths; 
-        En=eigvec_mat(:,L+1:Nrx);
+        En=eigvec_mat(:,L+1:length(a));
         %Pmusic(iAoA,iToF) = abs(1/(a'*(En*En')*a));
         Pmusic(iAoA,iToF) = abs((a'*a)/(a'*(En*En')*a));
     end
@@ -51,7 +51,7 @@ end
 
 LOG_DATE = strrep(datestr(now,30),'T','');
 
-%% MUSIC_AOA_TOF¿ÉÊÓ»¯
+%% MUSIC_AOA_TOFå¯è§†åŒ–
 hMUSIC = figure('Name', 'MUSIC_AOA_TOF', 'NumberTitle', 'off');
 [meshAoA,meshToF] = meshgrid(aoa,tof);
 SPmax=max(max(Pmusic));
@@ -66,7 +66,7 @@ grid on
 fprintf('\nFind all peaks of MUSIC spectrum: \n');
 
 global PLOT_MUSIC_AOA PLOT_MUSIC_TOF
-%% MUSIC_AOA¿ÉÊÓ»¯
+%% MUSIC_AOAå¯è§†åŒ–
 if PLOT_MUSIC_AOA
     num_computed_paths = paths;
     figure_name_string = sprintf('MUSIC_AOA, Number of Paths: %d', num_computed_paths);
@@ -83,18 +83,18 @@ if PLOT_MUSIC_AOA
     title('AoA Estimation')
     grid on;hold on;
 
-   %% ¼ÆËãËùÓĞÂ·¾¶µÄAoA
-    % ½µĞò·µ»ØÇ°paths´óµÄ·åÖµ¼°ÆäË÷Òı
+   %% è®¡ç®—æ‰€æœ‰è·¯å¾„çš„AoA
+    % é™åºè¿”å›å‰pathså¤§çš„å³°å€¼åŠå…¶ç´¢å¼•
     [pkt,lct]  = findpeaks(PmusicEnvelope_AOA,aoa,'SortStr','descend','NPeaks',paths); 
-    % ±ê¼Ç·åÖµ
+    % æ ‡è®°å³°å€¼
     plot(lct,pkt,'o','MarkerSize',12)
-    % ÉıĞòÊä³ö·åÖµµÄË÷Òı
+    % å‡åºè¾“å‡ºå³°å€¼çš„ç´¢å¼•
     disp(['Calculated AoA: ' num2str(sort(round(lct),'ascend')) ' [deg]'] )
     figureName = ['./figure/' 'MUSIC_AOA' '_' LOG_DATE '.jpg'];
     saveas(gcf,figureName);
 end
 
-%% MUSIC_TOF¿ÉÊÓ»¯
+%% MUSIC_TOFå¯è§†åŒ–
 if PLOT_MUSIC_TOF
     num_computed_paths = paths;
     figure_name_string = sprintf('MUSIC_TOF, %d paths', num_computed_paths);
@@ -110,14 +110,14 @@ if PLOT_MUSIC_TOF
     ylabel('Spectrum function P(\theta, \tau)  / dB')
     title('ToF Estimation')
     grid on;hold on;
-   %% ¼ÆËãËùÓĞÂ·¾¶µÄToF
+   %% è®¡ç®—æ‰€æœ‰è·¯å¾„çš„ToF
     [pkt,lct]  = findpeaks(PmusicEnvelope_ToF,tof*1e9,'SortStr','descend','NPeaks',paths); % 'MinPeakHeight',-4
     plot(lct,pkt,'o','MarkerSize',12)
     disp(['Calculated ToF: ' num2str(sort(round(lct),'ascend')) ' [ns]'] );
     figureName = ['./figure/' 'MUSIC_TOF' '_' LOG_DATE '.jpg'];
     saveas(gcf,figureName);
     
-   %% ¼ÆËãÖ±Éä¾¶AoAºÍToF
+   %% è®¡ç®—ç›´å°„å¾„AoAå’ŒToF
     fprintf('\nFind Direct Path AoA and ToF: \n')
     direct_path_tof_index = find(tof*1e9 == min(lct));
     direct_path_tof = min(lct); %[ns]
@@ -126,7 +126,7 @@ if PLOT_MUSIC_TOF
     disp(['(AOA, ToF) =  ('  num2str(direct_path_aoa) ' [deg], '  ...
        num2str(direct_path_tof) ' [ns]) ']);
 
-   %% ÔÚMUSICÎ±Æ×ÖĞ±ê¼ÇÖ±Éä¾¶
+   %% åœ¨MUSICä¼ªè°±ä¸­æ ‡è®°ç›´å°„å¾„
     set(groot,'CurrentFigure',hMUSIC);hold on;
     x_aoa = direct_path_aoa;
     y_tof = direct_path_tof;
@@ -140,7 +140,7 @@ if PLOT_MUSIC_TOF
         round(direct_path_aoa), ...
         round(direct_path_tof));
     text(x_aoa,y_tof,z_dB,txt);
-    % ÉèÖÃfigure hMUSICÎªµ±Ç°ÊÓÍ¼
+    % è®¾ç½®figure hMUSICä¸ºå½“å‰è§†å›¾
     figure(hMUSIC);
     figureName = ['./figure/' 'MUSIC_AOA_TOF' '_' LOG_DATE '.jpg'];
     saveas(gcf,figureName);
