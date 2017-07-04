@@ -6,7 +6,8 @@
 - CSI_NonCoherent 非相干源CSI生成，与标准MUSIC算法实现（AoA ToF联合估计）
 - CSI_Coherent 相干源CSI生成，与平滑MUSIC算法实现（AoA ToF联合估计）
 - 下一步计划，考虑带PDD/CFO/STO/PLL Initial Offset误差项的CSI信号仿真
-[Related Blog: CSI Generator设计与实现](http://www.jianshu.com/c/6e0897ba0cec)
+
+[Related Blog: CSI Generator设计原理（非相干）](http://www.jianshu.com/c/6e0897ba0cec)
 
 ---
 此项目服务于**QQ群（CSI信道状态信息交流：366102075）**
