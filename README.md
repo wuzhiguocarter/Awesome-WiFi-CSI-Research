@@ -1,13 +1,17 @@
 # Awesome-WiFi-CSI-Research
 置顶：
 
-[Opensource code: CSI_Generator and AoA-ToF Joint Estimation by MUSIC](https://github.com/wuzhiguocarter/Awesome-WiFi-CSI-Research)
+## 新增scripts文件夹，提供文件采集、实时可视化的脚本程序
+- 自动每分钟采集，并以时间戳命名文件，自动以日期建立文件夹，配置简单
+- 借助Realtime-processing-for-csitool使用Matlab远程服务，实时可视化csi
+
+## [Opensource code: CSI_Generator and AoA-ToF Joint Estimation by MUSIC](https://github.com/wuzhiguocarter/Awesome-WiFi-CSI-Research)
 
 - CSI_NonCoherent 非相干源CSI生成，与标准MUSIC算法实现（AoA ToF联合估计）
 - CSI_Coherent 相干源CSI生成，与平滑MUSIC算法实现（AoA ToF联合估计）
 - 下一步计划，考虑带PDD/CFO/STO/PLL Initial Offset误差项的CSI信号仿真
 
-[Related Blog: CSI Generator设计原理（非相干）](http://www.jianshu.com/c/6e0897ba0cec)
+## [Related Blog: CSI Generator设计原理（非相干）](http://www.jianshu.com/c/6e0897ba0cec)
 
 ---
 此项目服务于**QQ群（CSI信道状态信息交流：366102075）**
