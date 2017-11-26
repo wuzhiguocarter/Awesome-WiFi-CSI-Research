@@ -1,0 +1,5 @@
+drwxrwxr-x    2 1000     1000         4096 Aug 18 09:03 .
+drwxrwxr-x    9 1000     1000         4096 Aug 18 09:03 ..
+-rw-rw-r--    1 1000     1000         4439 Aug 18 09:03 hostap-dotconfig
+-rw-rw-r--    1 1000     1000        42308 Aug 18 09:03 hostapd.conf-real
+-rw-rw-r--    1 1000     1000           54 Aug 18 09:03 hostapd.conf-test

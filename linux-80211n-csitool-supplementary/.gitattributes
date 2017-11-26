@@ -1,0 +1,4 @@
+*.mexmaci -crlf -diff -merge
+*.mexmaci64 -crlf -diff -merge
+*.ucode -crlf -diff -merge
+

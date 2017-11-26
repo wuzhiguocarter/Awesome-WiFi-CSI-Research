@@ -1,0 +1,8 @@
+drwxrwxr-x    3 1000     1000         4096 Aug 27 10:10 .
+drwxrwxr-x    9 1000     1000         4096 Aug 18 09:03 ..
+-rw-rw-r--    1 1000     1000         3610 Aug 18 09:03 client_mode.sh
+drwxrwxr-x    3 1000     1000         4096 Aug 18 09:03 data
+-rw-rw-r--    1 1000     1000         3614 Aug 18 09:10 injection_send.sh
+-rw-rw-r--    1 1000     1000         2498 Aug 18 09:03 log2file.sh
+-rw-r--r--    1 1000     1000          600 Aug 27 10:41 my_setup_injection.sh
+-rw-r--r--    1 1000     1000          936 Aug 27 10:08 my_shell_injection.sh

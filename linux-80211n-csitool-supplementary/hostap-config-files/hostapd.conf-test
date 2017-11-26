@@ -1,0 +1,4 @@
+interface=wlan0
+ssid=csitool-test
+channel=1
+hw_mode=g
