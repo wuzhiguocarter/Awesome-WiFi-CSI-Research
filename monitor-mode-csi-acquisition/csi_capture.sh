@@ -28,7 +28,7 @@ while { $cnt < 13 } {
 	incr cnt
 }
 
-# channel 36,40, ... , 
+# channel 36,40, ... , 64 
 set channel($cnt) 36
 puts "value of channel($cnt): $channel($cnt)"
 set cnt2 $cnt
@@ -105,6 +105,10 @@ while { $cnt_index < $cnt } {
 	expect "root@" {send "pkill log_to_file\n"}
 	incr cnt_index
 }
+set spawn_id $id_monitor
+#expect "root@" {send "cd .. && ./mvdat.sh\n"}
+#expect "end"
+
 interact
 
 
