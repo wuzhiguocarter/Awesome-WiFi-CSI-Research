@@ -98,7 +98,7 @@ while { $cnt_index < $cnt } {
 	expect "root@" {send "bash ./my_shell_monitor.sh 1 $channel($cnt_index) HT20\n"}
 	expect "end"
 	set spawn_id $id_injection
-	expect "root@" {send "bash ./my_shell_injection.sh 1 $channel($cnt_index) HT20\n"}
+	expect "root@" {send "bash ./my_shell_injection.sh 1 $channel($cnt_index) HT20 &\n"}
 	expect "end"
 	set spawn_id $id_monitor
 	expect "root@" {send "sleep 10\n"}
@@ -106,8 +106,8 @@ while { $cnt_index < $cnt } {
 	incr cnt_index
 }
 set spawn_id $id_monitor
-#expect "root@" {send "cd .. && ./mvdat.sh\n"}
-#expect "end"
+expect "root@" {send "cd .. && ./cpdat.sh\n"}
+expect "end"
 
 interact
 
