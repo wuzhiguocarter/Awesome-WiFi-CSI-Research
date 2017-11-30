@@ -17,5 +17,7 @@ else
 	iw dev ${WIFIDEV} set channel $2 $3 && sleep 1
 	echo "logging csi data to file ..."
 	../netlink/log_to_file ../data/$2_$3.dat  &
+	sleep 30
+	pkill log_to_file
 	cd ${currentDir}
 fi
