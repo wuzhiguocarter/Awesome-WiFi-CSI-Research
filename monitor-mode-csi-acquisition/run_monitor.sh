@@ -8,13 +8,14 @@
 #echo "all channel: "$channel_array
 
 # mkdir data
-rm -rf ../data
-mkdir ../data
+#rm -rf ../data
+#mkdir ../data
 
 
 if [ $1 == "setup"]
 then
 # setup(run only once)
+	mkdir -p ../data
 	./my_shell_monitor.sh 0
 else
 # work
