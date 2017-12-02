@@ -12,7 +12,7 @@
 #mkdir ../data
 
 
-if [ $1 == "setup"]
+if [ $1 == "setup" ]
 then
 # setup(run only once)
 	mkdir -p ../data

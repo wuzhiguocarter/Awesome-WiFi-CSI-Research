@@ -16,7 +16,7 @@ else
 	ip link set ${WIFIDEV} up && sleep 1
 	iw dev ${WIFIDEV} set channel $2 $3 && sleep 1
 	echo "logging csi data to file ..."
-	../netlink/log_to_file ../data/$2_$3$.(date -d "today" +"%Y%m%d_%H%M%S").dat  &
+	../netlink/log_to_file ../data/$2_$3.$(date -d "today" +"%Y%m%d_%H%M%S").dat  &
 	sleep 30
 	pkill log_to_file
 	cd ${currentDir}
