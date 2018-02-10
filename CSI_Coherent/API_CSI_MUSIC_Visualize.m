@@ -159,7 +159,7 @@ if PLOT_MUSIC_TOF
        num2str(direct_path_tof) ' [ns]) ']);
 
    %% 在MUSIC伪谱中标记直射径
-    set(groot,'CurrentFigure',hMUSIC);hold on;
+    set(0,'CurrentFigure',hMUSIC);hold on;
     x_aoa = direct_path_aoa;
     y_tof = direct_path_tof;
     z_dB = Pmusic(direct_path_aoa_index,direct_path_tof_index);
