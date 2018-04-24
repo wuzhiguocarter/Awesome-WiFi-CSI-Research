@@ -39,11 +39,11 @@ for ipath = 1:paths
                                         Nrx,ant_dist,fc,Nc,Delta_f);
 end
 
-if 0 % ���������Դ
-    Gamma_temp=randn(paths-2,samples)+randn(paths-2,samples)*1j; % complex attuation(�������Դ)
+if 0 % 测试相干信源 要想进入此循环，将0改为1
+    Gamma_temp=randn(paths-2,samples)+randn(paths-2,samples)*1j; % complex attuation(不相干信源)
     ComplexConst = randn+1j*rand;
-    % �������һ���Ͷ���·���ź���ɵĽ����ź�
-    Gamma = [Gamma_temp;ComplexConst*Gamma_temp(1,:);ComplexConst*Gamma_temp(2,:)]; 
+    % 生成与第一条信号相干的两条接收信号 要想明显观看未平滑算法对想干信号和非相干信号的作用效果，建议将CSI_Configure.m中的SNR改为1
+    Gamma = [Gamma_temp;ComplexConst*Gamma_temp(1,:);ComplexConst*ComplexConst*Gamma_temp(1,:)]; %原程序这里会报错！！！
 else
     Gamma = randn(paths,samples)+randn(paths,samples)*1j; % complex attuation
 end
