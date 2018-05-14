@@ -3,20 +3,20 @@
 很抱歉由于个人工作等原因，没有时间维护和回复各位。\
 另外，欢迎有志者托管本项目，如有兴趣可以跟我发邮件1600682324@qq.com. \
 关于本项目，止于理论和仿真交流。实际数据的处理，请参考SpotFi作者的主页和项目主页。 \
-http://web.stanford.edu/~mkotaru/
-https://bitbucket.org/mkotaru/
-SpotFi源码实现（SpotFi作者开源）
-https://bitbucket.org/mkotaru/spotfimusicaoaestimation
-注意事项：由于SpotFi文献中使用了ArrayTrack中的射频校准方法，直接处理CSI数据可能不能达到预期效果。
-MATLAB code for Angle of arrival estimation algorithm in SpotFi paper [1].
+http://web.stanford.edu/~mkotaru/ \
+https://bitbucket.org/mkotaru/ \
+SpotFi源码实现（SpotFi作者开源）\
+https://bitbucket.org/mkotaru/spotfimusicaoaestimation \
+注意事项：由于SpotFi文献中使用了ArrayTrack中的射频校准方法，直接处理CSI数据可能不能达到预期效果。 \
+MATLAB code for Angle of arrival estimation algorithm in SpotFi paper [1]. \
 
-Setup is as described in section 4 of [1].
-Instructions:
-1. Calibrate the receiver radio chains as described in [2]
-2. reshape CSI into 90x1 vector where first 30 elements correspond to subcarriers for first rx antenna, second 30 correspond to CSI from next 30 subcarriers and last 30 elements correspond to CSI from subcarriers of last receiver antenna and run main.m
+Setup is as described in section 4 of [1]. \
+Instructions: \
+1. Calibrate the receiver radio chains as described in [2] \
+2. reshape CSI into 90x1 vector where first 30 elements correspond to subcarriers for first rx antenna, second 30 correspond to CSI from next 30 subcarriers and last 30 elements correspond to CSI from subcarriers of last receiver antenna and run main.m \
 
-[1] Kotaru, Manikanta, et al. "Spotfi: Decimeter level localization using wifi." ACM SIGCOMM Computer Communication Review. Vol. 45. No. 4. ACM, 2015.
-[2] Xiong, Jie, and Kyle Jamieson. "ArrayTrack: A Fine-Grained Indoor Location System." NSDI. 2013.
+[1] Kotaru, Manikanta, et al. "Spotfi: Decimeter level localization using wifi." ACM SIGCOMM Computer Communication Review. Vol. 45. No. 4. ACM, 2015. \
+[2] Xiong, Jie, and Kyle Jamieson. "ArrayTrack: A Fine-Grained Indoor Location System." NSDI. 2013. \
 
 ## 新增scripts文件夹，提供文件采集、实时可视化的脚本程序
 - 自动每分钟采集，并以时间戳命名文件，自动以日期建立文件夹，配置简单
