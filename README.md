@@ -18,6 +18,9 @@ Instructions:
 [1] Kotaru, Manikanta, et al. "Spotfi: Decimeter level localization using wifi." ACM SIGCOMM Computer Communication Review. Vol. 45. No. 4. ACM, 2015. \
 [2] Xiong, Jie, and Kyle Jamieson. "ArrayTrack: A Fine-Grained Indoor Location System." NSDI. 2013. 
 
+## 如果github网速下载慢，可以gitee同步仓库下载
+https://gitee.com/dearyiming/Awesome-WiFi-CSI-Research
+
 ## 新增scripts文件夹，提供文件采集、实时可视化的脚本程序
 - 自动每分钟采集，并以时间戳命名文件，自动以日期建立文件夹，配置简单
 - 借助Realtime-processing-for-csitool使用Matlab远程服务，实时可视化csi
