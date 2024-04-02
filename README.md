@@ -1,7 +1,7 @@
 # Awesome-WiFi-CSI-Research
 置顶：\
 很抱歉由于个人工作等原因，没有时间维护和回复各位。\
-另外，欢迎有志者托管本项目，如有兴趣可以跟我发邮件1600682324@qq.com. \
+另外，欢迎有志者托管本项目，如有兴趣可以发我Gmail，邮箱地址(base64编码了）`d3V6aGlndW9jYXJ0ZXJAZ21haWwuY29t`. \
 关于本项目，止于理论和仿真交流。实际数据的处理，请参考SpotFi作者的主页和项目主页。 \
 http://web.stanford.edu/~mkotaru/ \
 https://bitbucket.org/mkotaru/ \
